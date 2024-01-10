@@ -30,11 +30,9 @@
 <hr>
 <?php
     /* utilizando variables */
+    $im = 'error';
     if ($numero < 100) {
         $im = 'ok';
-    }
-    else{
-        $im = 'error';
     }
 ?>
         <img src="imgs/<?= $im ?>.png">
