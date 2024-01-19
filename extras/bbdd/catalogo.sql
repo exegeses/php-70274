@@ -1,5 +1,5 @@
 ##########################################
-## Base de datos: catalogo
+## BACKUP de Base de datos: catalogo
 ##########################################
 CREATE DATABASE IF NOT EXISTS catalogo DEFAULT CHARACTER SET utf8mb4;
 USE catalogo;
@@ -65,7 +65,7 @@ DROP TABLE IF EXISTS productos;
 CREATE TABLE productos (
   idProducto mediumint unsigned primary key auto_increment NOT NULL,
   prdNombre varchar(75) unique NOT NULL,
-  prdPrecio double(9,2) unsigned NOT NULL,
+  prdPrecio decimal(9,2) unsigned NOT NULL,
   idMarca tinyint unsigned NOT NULL,
     foreign key ( idMarca ) references marcas ( idMarca ),
   idCategoria tinyint unsigned NOT NULL,
