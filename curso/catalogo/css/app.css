@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&display=swap');
 
 body{
-    font-family: Nunito, sans-serif;
+    font-family: 'Figtree', sans-serif;
     font-weight: 300;
     font-size: 1.11em;
-    color: #444444;
 }
 h1{
-    padding-left: 56px;
+    padding-left: 80px;
+    margin-bottom: 32px;
 }
 /* header - nav */
 #m-logo{
-    width: 30px;
+    width: 32px;
 }
 .a-menu{
     transition: .3s;
@@ -19,19 +19,19 @@ h1{
     opacity: .9;
 }
 .a-menu:hover{
-    border-bottom: 2px solid #95D073;
+    border-bottom: 2px solid #73d1b2;
     opacity: 1;
 }
 
 .btn-warning{
-    background-color: #7BC450;
-    border-color: #64a340;
+    background-color: #45a887;
+    border-color: #368a6e;
     font-weight: 500;
     color: #fff;
 }
 .btn-warning:hover{
-    background-color: #95D073;
-    border-color: #64a340;
+    background-color: #67b89d;
+    border-color: #368a6e;
     color: #fff;
 }
 
@@ -41,6 +41,18 @@ main{
     min-height: 600px;
     margin-bottom: 100px;
 }
+
+    .btn-outline-secondary{
+        border-color: #388f72;
+        color: #388f72;
+    }
+    .btn-dark{
+        background-color: #1B1D20;
+        border-color: #4B5057;
+    }
+    .sep{
+        margin-left: 16px;
+    }
 
     .producto{
         display: flex;
@@ -64,20 +76,20 @@ main{
         top: -100px;
         left: 80px;
         padding: 4px 20px;
-        background-color: #7BC450;
+        background-color: #51c49e;
         color: #fff;
         font-weight: 500;
         border-radius: 20px;
     }
     .precio2{
         padding: 4px 20px;
-        background-color: #7BC450;
+        background-color: #51c49e;
         color: #fff;
         font-weight: 500;
         border-radius: 20px;
     }
     .precio3{
-        color: #6cad47;
+        color: #47ad8b;
         font-size: 1.12em;
         font-weight: 500;
     }
@@ -90,12 +102,11 @@ footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid #444;
 }
     #m-iso-2{
         width: 24px;
-        margin-right: 8px;
+        margin-right: 16px;
     }
     #copyleft{
         display:inline-block;

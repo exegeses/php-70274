@@ -4,8 +4,8 @@
     require 'funciones/conexion.php';
     require 'funciones/productos.php';
     $productos = listarProductos();
-	include 'layout/header.php';
-	include 'layout/nav.php';
+	include 'layouts/header.php';
+	include 'layouts/nav.php';
 ?>
 
     <main class="container py-4">
@@ -63,4 +63,4 @@
 
     </main>
 
-<?php  include 'layout/footer.php';  ?>
+<?php  include 'layouts/footer.php';  ?>

@@ -3,8 +3,8 @@
     require 'funciones/conexion.php';
     require 'funciones/marcas.php';
     $marcas = listarMarcas();
-	include 'layout/header.php';
-	include 'layout/nav.php';
+	include 'layouts/header.php';
+	include 'layouts/nav.php';
 ?>
 
     <main class="container py-4">
@@ -20,7 +20,7 @@
                     <th>ID</th>
                     <th>Marca</th>
                     <th colspan="2">
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formAgregarMarca.php" class="btn btn-outline-secondary">
                             Agregar
                         </a>
                     </th>
@@ -56,4 +56,4 @@
 
     </main>
 
-<?php  include 'layout/footer.php';  ?>
+<?php  include 'layouts/footer.php';  ?>
