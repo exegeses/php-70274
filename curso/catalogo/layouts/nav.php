@@ -1,5 +1,5 @@
 <!-- header/nav -->
-<header class="p-4 bg-dark text-white">
+<header class="p-4 bg-dark-subtle text-white">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
