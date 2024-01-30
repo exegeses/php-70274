@@ -63,10 +63,34 @@
         }
     }
 
+    function verificraProductoPorMarca() : int
+    {
+        $idMarca = $_GET['idMarca'];
+        $link = conectar();
+        $sql = "SELECT 1 FROM productos
+                    WHERE idMarca = ".$idMarca;
+        $resultado = mysqli_query( $link, $sql );
+        $cantidad = mysqli_num_rows($resultado);
+        return $cantidad;
+    }
+
+    function eliminarMarca() : bool
+    {
+        $idMarca = $_POST['idMarca'];
+        $link = conectar();
+        $sql = "DELETE FROM marcas
+                    WHERE idMarca = ".$idMarca;
+        try {
+            $resultado = mysqli_query($link, $sql);
+            return  $resultado;
+        }
+        catch ( Exception $e ){
+            echo $e->getMessage();
+            return  false;
+        }
+    }
+
     /**
      * CRUD DE MARCAS
-     *
-     * eliminarMarca()
-     *
      */
 
