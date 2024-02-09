@@ -37,14 +37,23 @@
          *  entonces comenzamos la rutina de autenticación (sesiones)
          */
         ############# RUTINA DE AUTENTICACIÓN ##################
+        $_SESSION['login'] = 1; //token
 
+        $_SESSION['usuEmail'] = $usuEmail;
+        $_SESSION['idUsuario'] = $arrayUsuario['idUsuario'];
+        $_SESSION['usuNombre'] = $arrayUsuario['usuNombre'];
+        $_SESSION['usuApellido'] = $arrayUsuario['usuApellido'];
+        $_SESSION['idRol'] = $arrayUsuario['idRol'];
 
         header('location: admin.php');
     }
 
     function logout()
     {
-
+        //Eliminamos todas las variables de sesión
+        session_unset();
+        //Eliminamos la sesión
+        session_destroy();
     }
 
     function autenticar()
