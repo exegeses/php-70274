@@ -48,7 +48,7 @@
         header('location: admin.php');
     }
 
-    function logout()
+    function logout() : void
     {
         //Eliminamos todas las variables de sesión
         session_unset();
@@ -56,7 +56,9 @@
         session_destroy();
     }
 
-    function autenticar()
+    function autenticar() : void
     {
-
+        if( !isset( $_SESSION['login'] ) ){
+            header('location: formLogin.php?error=2');
+        }
     }

@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="formModificarClave.php">
                                 <i class="bi bi-key"></i>
                                 Modificar contraseña
                             </a>

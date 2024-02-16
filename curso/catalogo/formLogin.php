@@ -25,9 +25,13 @@
         </div>
 <?php
         if( isset( $_GET['error'] ) ){
+            $mensaje = match ( $_GET['error'] ){
+                '1' => 'Nombre de usuario y/o clave incorrectos.',
+                '2' => 'Debe loguearse para acceder a sistema.'
+            };
 ?>
         <div class="alert alert-danger p-4 col-8 mx-auto shadow">
-            Nombre de usuario y/o clave incorrectos.
+            <?= $mensaje ?>
         </div>
 <?php
         }

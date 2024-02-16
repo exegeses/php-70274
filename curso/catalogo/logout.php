@@ -1,6 +1,6 @@
 <?php
     require 'config/config.php';
-    require 'funciones/auteenticacion.php';
+    require 'funciones/autenticacion.php';
         logout();
     include 'layouts/header.php';
     include 'layouts/nav.php';
