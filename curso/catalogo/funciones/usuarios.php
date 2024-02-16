@@ -1,5 +1,14 @@
 <?php
 
+    function listarUsuarios() : mysqli_result
+    {
+        $link = conectar();
+        $sql = "SELECT * 
+                    FROM usuarios 
+                    ORDER BY idUsuario";
+        return mysqli_query($link, $sql);
+        }
+
     function registrarUsuario()
     {
         $usuNombre = $_POST['usuNombre'];

@@ -5,7 +5,7 @@ include '../layouts/header.php';
         <h1>Hashear ( encriptar ) un dato</h1>
 
 <?php
-        $datoSinEncriptar = 'asdfg';
+        $datoSinEncriptar = 'adfg';
         $datoHash = password_hash( $datoSinEncriptar, PASSWORD_DEFAULT );
         echo $datoHash;
             echo '<br>';

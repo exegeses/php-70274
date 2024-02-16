@@ -62,3 +62,12 @@
             header('location: formLogin.php?error=2');
         }
     }
+
+    function noAdmin() : void
+    {
+        //Si el usuario no es administrador
+        if( $_SESSION['idRol'] != 1 ){
+            //Redirección a página noAdmin.php
+            header('location: noAdmin.php');
+        }
+    }
