@@ -1,5 +1,38 @@
 <?php
 
+function busqueda() : array
+{
+    $search['search'] = $_GET['search'] ?? '';
+    $search['idMarca'] = $_GET['idMarca'] ?? '';
+    $search['idCategoria'] = $_GET['idCategoria'] ?? '';
+
+    return $search;
+}
+
+function buscaProductos() : mysqli_result | bool
+{
+    $search = busqueda();
+    $link = conectar();
+    $sql = "SELECT *
+                    FROM productos p
+                     JOIN marcas m 
+                       ON m.idMarca = p.idMarca
+                     JOIN categorias c 
+                       ON c.idCategoria = p.idCategoria
+                   WHERE prdNombre LIKE '%".$search['search']."%'";
+// Sólo concatenamos marca si hay un valor DISTINTO de vacío
+    if( $search['idMarca'] != '' ){
+        $sql .= " AND p.idMarca = ".$search['idMarca'];
+    }
+// Sólo concatenamos categoria si hay un valor DISTINTO de vacío
+    if( $search['idCategoria'] != '' ){
+        $sql .= " AND p.idCategoria = ".$search['idCategoria'];
+    }
+
+    return  mysqli_query( $link, $sql );
+}
+
+
     function listarProductos() : mysqli_result | bool
     {
         $link = conectar();
